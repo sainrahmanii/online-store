@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('alamat');
-            $table->integer('payment_id');
+            // $table->integer('payment_id');
             $table->timestamps();
         });
     }

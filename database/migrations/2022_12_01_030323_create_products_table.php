@@ -15,12 +15,15 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('kategori_id');
+            // $table->integer('user_id');
+            $table->foreignId('user_id')->constrained();
+            // $table->integer('kategori_id');
+            $table->foreignId('kategori_id')->constrained();
             $table->string('nama_product');
             $table->integer('harga');
             $table->text('deskripsi');
-            $table->integer('gambar_id');
+            // $table->integer('gambar_id');
+            $table->foreignId('gambar_id')->nullable()->constrained();
             $table->timestamps();
         });
     }
