@@ -16,6 +16,7 @@ class UserController extends Controller
 
     public function registerView()
     {
+        // return view('master');
     }
 
     public function register(Request $data)

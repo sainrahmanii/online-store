@@ -5,6 +5,7 @@ namespace App\Repositories\User;
 use LaravelEasyRepository\Implementations\Eloquent;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Repositories\User\UserRepository;
 
 class UserRepositoryImplement extends Eloquent implements UserRepository
 {
