@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 // Route::get('/', [UserController::class, 'registerView']);
 Route::post('/register', [UserController::class, 'register']);
+Route::resource('index', UserController::class);
