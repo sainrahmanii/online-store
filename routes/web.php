@@ -20,3 +20,5 @@ Route::get('/', function () {
 
 // Route::get('/', [UserController::class, 'registerView']);
 Route::post('/register', [UserController::class, 'register']);
+Route::post('/create-penjual', [UserController::class, 'createPenjual']);
+Route::resource('index', UserController::class);

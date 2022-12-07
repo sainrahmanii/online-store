@@ -24,4 +24,10 @@ class UserController extends Controller
         $user = $this->mainService->createUser($data);
         return response()->json($user);
     }
+
+    public function createPenjual(Request $request)
+    {
+        $penjual = $this->mainService->createPenjual($request);
+        return response()->json($penjual);
+    }
 }
