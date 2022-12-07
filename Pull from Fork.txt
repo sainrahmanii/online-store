@@ -1,0 +1,6 @@
+git remote add upstream https://github.com/sainrahmanii/online-store.git
+git fetch upstream
+git add .
+git commit -m "rebase"
+git rebase upstream/master
+git push origin master --force

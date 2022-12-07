@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Gambar;
+use App\Models\DetailPenjual;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -48,5 +49,10 @@ class User extends Authenticatable
     public function gambar()
     {
         return $this->belongsTo(Gambar::class);
+    }
+
+    public function detailPenjual()
+    {
+        return $this->hasOne(DetailPenjual::class);
     }
 }

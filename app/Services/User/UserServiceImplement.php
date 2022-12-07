@@ -2,6 +2,7 @@
 
 namespace App\Services\User;
 
+use Illuminate\Support\Facades\DB;
 use App\Repositories\User\UserRepositoryImplement;
 
 class UserServiceImplement implements UserService
@@ -21,9 +22,25 @@ class UserServiceImplement implements UserService
     public function createUser($data)
     {
         try {
+            DB::beginTransaction();
             $user = $this->mainRepository->createUser($data);
+            DB::commit();
             return $user;
         } catch (\Throwable $th) {
+            DB::rollBack();
+            throw $th;
+        }
+    }
+
+    public function createPenjual($data)
+    {
+        try {
+            DB::beginTransaction();
+            $penjual = $this->mainRepository->createPenjual($data);
+            DB::commit();
+            return $penjual;
+        } catch (\Throwable $th) {
+            DB::rollBack();
             throw $th;
         }
     }
