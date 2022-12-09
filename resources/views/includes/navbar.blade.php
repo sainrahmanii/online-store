@@ -1,4 +1,4 @@
-<nav class="fixed top-0 left-0 w-full bg-white shadow-lg tight-0">
+<nav class="fixed top-0 left-0 w-full bg-white shadow-lg tight-0 z-10">
     <div class="max-w-6xl py-3 mx-auto">
         <div class="flex items-center justify-between">
             <button class="flex items-center">
@@ -27,7 +27,7 @@
 
             {{-- button sign-up and sign-in --}}
             <div class="flex items-center">
-                <a href="/login">
+                {{-- <a href="/login">
                     <button class="py-2 font-bold text-white bg-teal-300 rounded-full px-7 hover:bg-teal-500">
                         SIGN IN
                     </button>
@@ -36,7 +36,9 @@
                     <button class="py-2 ml-2 font-bold text-white bg-teal-500 rounded-full px-7 hover:bg-teal-700">
                         SIGN UP
                     </button>
-                </a>
+                </a> --}}
+                <h2>Halo, <span class="font-bold">Husain Rahmani</span></h2>
+                <img src="{{ asset('assets/sain.png') }}" alt="" class="w-12 ml-4">
             </div>
         </div>
     </div>

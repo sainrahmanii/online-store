@@ -27,6 +27,7 @@ Route::get('/login', [AuthController::class, 'login']);
 
 // socialite
 Route::get('/auth/google', [AuthController::class, 'google'])->name('auth.google');
+Route::get('/auth/google/callback', [AuthController::class, 'handleGoogle'])->name('auth.google.callback');
 
 // Route::get('/', [UserController::class, 'registerView']);
 Route::prefix('users')->group(function () {

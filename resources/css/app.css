@@ -5,3 +5,12 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+
+.slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slider.is-moving {
+    transform: translateX(-33.33%);
+}

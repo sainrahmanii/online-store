@@ -10,6 +10,9 @@
     {{-- fonts --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
 
+    {{-- slider --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
     @vite('resources/css/app.css')
 
 </head>
@@ -19,6 +22,7 @@
     @include('includes.navbar')
     @yield('content')
 
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
 </body>
 
 </html>
