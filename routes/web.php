@@ -22,6 +22,8 @@ Route::get('/', function () {
     return view('layouts.index');
 });
 
+Route::get('/detail-product', [AuthController::class, 'details'])->name('detail.product');
+
 Route::get('/register', [AuthController::class, 'register']);
 Route::get('/login', [AuthController::class, 'login']);
 

@@ -71,6 +71,25 @@
           <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+    <div class="grid grid-cols-4 gap-2 my-5">
+      <a href="{{ route('detail.product') }}">
+        <div class="bg-base-100 border rounded-lg shadow-lg cursor-pointer">
+          <img src="https://www.superlive.id/storage/articles/c46b2b68-7fa0-4384-8b86-f886cbea3f21.png" alt="" class="w-full rounded-t-lg">
+          <div class="p-2">
+            <h2 class="text-gray-500">Tas Gunung</h2>
+            <h2 class="font-bold">Rp 250.000</h2>
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              <p class="pl-2">Kab. Bogor</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
 </div>
 
 @endsection

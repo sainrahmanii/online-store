@@ -40,4 +40,9 @@ class AuthController extends Controller
 
         return redirect()->route('/');
     }
+
+    public function details()
+    {
+        return view('layouts.detail');
+    }
 }
