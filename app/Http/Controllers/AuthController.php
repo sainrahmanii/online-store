@@ -45,4 +45,14 @@ class AuthController extends Controller
     {
         return view('layouts.detail');
     }
+
+    public function checkout()
+    {
+        return view('layouts.checkout');
+    }
+
+    public function success_checkout()
+    {
+        return view('layouts.success_checkout');
+    }
 }

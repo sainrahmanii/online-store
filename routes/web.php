@@ -23,6 +23,8 @@ Route::get('/', function () {
 });
 
 Route::get('/detail-product', [AuthController::class, 'details'])->name('detail.product');
+Route::get('/checkout-product', [AuthController::class, 'checkout'])->name('checkout.product');
+Route::get('/success-checkout', [AuthController::class, 'success_checkout'])->name('success.checkout');
 
 Route::get('/register', [AuthController::class, 'register']);
 Route::get('/login', [AuthController::class, 'login']);
