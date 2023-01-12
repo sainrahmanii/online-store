@@ -2,14 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Gambar;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
+use App\Repositories\User\UserRepositoryImplement;
 
 class AuthController extends Controller
 {
+    private $mainService;
+
+    public function __construct(UserRepositoryImplement $mainService)
+    {
+        $this->mainService = $mainService;
+    }
+
+
     public function register()
     {
         return view('layouts.auth.register');
@@ -27,18 +33,10 @@ class AuthController extends Controller
 
     public function handleGoogle()
     {
-        $callback = Socialite::driver('google')->stateless()->user();
-        $data = [
-            'nama_lengkap'      => $callback->getName(),
-            'email'     => $callback->getEmail(),
-            'url'    => $callback->getAvatar()
-        ];
+        $user = $this->mainService->handleGoogle();
+        Auth::login($user);
 
-        $user = User::firstOrCreate(['email' => $data['email']], $data);
-        $gambar = Gambar::create(['avatar' => $data['url']], $data);
-        Auth::login($user, $gambar, true);
-
-        return redirect()->route('/');
+        return redirect()->route('detail.product');
     }
 
     public function details()

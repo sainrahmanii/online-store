@@ -19,6 +19,12 @@ class UserServiceImplement implements UserService
         $this->mainRepository = $mainRepository;
     }
 
+    public function handleGoogle()
+    {
+        $data = $this->mainRepository->handleGoogle();
+        return $data;
+    }
+
     public function createUser($data)
     {
         try {
@@ -32,11 +38,11 @@ class UserServiceImplement implements UserService
         }
     }
 
-    public function createPenjual($data)
+    public function upgradePenjual($data, $id)
     {
         try {
             DB::beginTransaction();
-            $penjual = $this->mainRepository->createPenjual($data);
+            $penjual = $this->mainRepository->upgradePenjual($data, $id);
             DB::commit();
             return $penjual;
         } catch (\Throwable $th) {
