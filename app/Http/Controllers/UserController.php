@@ -25,9 +25,9 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    public function createPenjual(Request $request)
+    public function upgradePenjual(Request $data, $id)
     {
-        $penjual = $this->mainService->createPenjual($request);
+        $penjual = $this->mainService->upgradePenjual($data, $id);
         return response()->json($penjual);
     }
 }

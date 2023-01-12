@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\VoucherController;
 use App\Http\Controllers\KategoriController;
 
@@ -37,7 +38,7 @@ Route::get('/auth/google/callback', [AuthController::class, 'handleGoogle'])->na
 Route::prefix('users')->group(function () {
     Route::controller(UserController::class)->group(function () {
         Route::post('/register', 'register')->name('register');
-        Route::post('/create-penjual', 'createPenjual');
+        Route::put('/{id}/penjual', 'upgradePenjual');
     });
 });
 
@@ -57,5 +58,12 @@ Route::prefix('kategoris')->group(function () {
 Route::prefix('vouchers')->group(function () {
     Route::controller(VoucherController::class)->group(function () {
         Route::post('/create', 'createVoucher');
+    });
+});
+
+
+Route::prefix('products')->group(function () {
+    Route::controller(ProductController::class)->group(function () {
+        Route::post('/create', 'createProduct');
     });
 });
