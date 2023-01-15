@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
@@ -39,6 +40,14 @@ Route::prefix('users')->group(function () {
     Route::controller(UserController::class)->group(function () {
         Route::post('/register', 'register')->name('register');
         Route::put('/{id}/penjual', 'upgradePenjual');
+    });
+});
+
+Route::prefix('dashboard')->name('dashboard.')->group(function(){
+    Route::controller(DashboardController::class)->group(function(){
+        Route::get('/', 'index')->name('index');
+        Route::get('/products', 'products')->name('products');
+        Route::get('/checkouts', 'checkouts')->name('checkouts');
     });
 });
 

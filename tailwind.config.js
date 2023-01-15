@@ -4,7 +4,13 @@ module.exports = {
     "./resources/**/*.blade.php",
   ],
   theme: {
-    extend: {},
+    extend: {
+        height: {
+        '128': '25rem',
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }

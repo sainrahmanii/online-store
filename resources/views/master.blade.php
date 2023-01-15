@@ -10,7 +10,7 @@
     {{-- fonts --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
 
-    {{-- slider --}}
+    {{-- library tailwind --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
 
     @vite('resources/css/app.css')

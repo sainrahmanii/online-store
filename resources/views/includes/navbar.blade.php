@@ -23,7 +23,7 @@
                         </svg>
                     </span>
                     <input type="text" placeholder="Search for anything..."
-                     class="block py-2 bg-white border rounded-full placeholder:text-slate-400 w-96 border-slate-300 px-9 outline-teal-500">
+                        class="block py-2 bg-white border rounded-full placeholder:text-slate-400 w-96 border-slate-300 px-9 outline-teal-500">
                 </div>
             </div>
 
@@ -40,11 +40,69 @@
                     </button>
                 </a> --}}
                 <div class="border-r-2 border-slate-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mx-3 fill-slate-400">
-                        <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="w-6 h-6 mx-3 fill-slate-400">
+                        <path
+                            d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
                     </svg>
                 </div>
-                <img src="{{ asset('assets/sain.png') }}" alt="" class="w-12 ml-4">
+                <img src="{{ asset('assets/sain.png') }}" alt="" class="w-12 ml-4 dropdown cursor-pointer" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+
+                <ul class="
+                      dropdown-menu
+                      min-w-max
+                      absolute
+                      hidden
+                      bg-white
+                      text-base
+                      z-50
+                      float-left
+                      py-2
+                      px-3
+                      list-none
+                      text-left
+                      rounded-lg
+                      shadow-lg
+                      mt-1
+                      m-0
+                      bg-clip-padding
+                      border-none
+                    "
+                    aria-labelledby="dropdownMenuButton1">
+                    <li>
+                        <a class="
+                          dropdown-item
+                          text-sm
+                          py-2
+                          px-4
+                          font-normal
+                          block
+                          w-full
+                          whitespace-nowrap
+                          bg-transparent
+                          text-gray-700
+                          hover:bg-gray-100
+                        "
+                            href="{{ route('dashboard.index') }}">Dashboard</a>
+                    </li>
+                    <li>
+                        <a class="
+                          dropdown-item
+                          text-sm
+                          py-2
+                          px-4
+                          font-normal
+                          block
+                          w-full
+                          whitespace-nowrap
+                          bg-transparent
+                          text-gray-700
+                          hover:bg-gray-100
+                        "
+                            href="#">Logout</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
