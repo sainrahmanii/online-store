@@ -20,4 +20,19 @@ class DashboardController extends Controller
     {
         return view('layouts.dashboard.checkouts.index');
     }
+
+    public function createProduct()
+    {
+        return view('layouts.dashboard.products.create');
+    }
+
+    public function editProduct()
+    {
+        return view('layouts.dashboard.products.edit');
+    }
+
+    public function updateStatus()
+    {
+        return view('layouts.dashboard.checkouts.edit');
+    }
 }

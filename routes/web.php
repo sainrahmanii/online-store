@@ -48,6 +48,9 @@ Route::prefix('dashboard')->name('dashboard.')->group(function(){
         Route::get('/', 'index')->name('index');
         Route::get('/products', 'products')->name('products');
         Route::get('/checkouts', 'checkouts')->name('checkouts');
+        Route::get('/create-product', 'createProduct')->name('create.product');
+        Route::get('/edit-product', 'editProduct')->name('edit.product');
+        Route::get('/update-status', 'updateStatus')->name('update.status');
     });
 });
 
